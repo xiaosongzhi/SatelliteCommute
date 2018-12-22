@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SatCommu</class>
+ <widget class="QWidget" name="SatCommu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>924</width>
+    <height>532</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>SatCommu</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>串口</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QComboBox" name="serialPort_ComBox"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="baud_Combox">
+          <item>
+           <property name="text">
+            <string>9600</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>4800</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="flushSerial_Btn">
+          <property name="text">
+           <string>刷新</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="openSerial_Btn">
+          <property name="text">
+           <string>打开</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_4">
+       <property name="title">
+        <string>预留</string>
+       </property>
+       <widget class="QPushButton" name="quit_Btn">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>退出</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,1">
+     <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="title">
+        <string>SBD</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="2" column="0">
+         <widget class="QPushButton" name="readMessage_Btn">
+          <property name="text">
+           <string>读取信息</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="checkDeviceState_Btn">
+          <property name="text">
+           <string>检查设备</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="checkSBDSignal_Btn">
+          <property name="text">
+           <string>检查信号</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="creatSession_Btn">
+          <property name="text">
+           <string>建立会话</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="4">
+         <widget class="QTextBrowser" name="SBD_TextBrowser"/>
+        </item>
+        <item row="4" column="0" colspan="4">
+         <widget class="QLabel" name="SBDState_Label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(85, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>SBD状态</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="4">
+         <widget class="QLineEdit" name="SBD_LineEdit"/>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="sendMessageSBD_Btn">
+          <property name="text">
+           <string>发送</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="clearSBD_TextBrowser_Btn">
+          <property name="text">
+           <string>清除</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="reset_Btn">
+          <property name="text">
+           <string>重置</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="title">
+        <string>拨号</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="setBaud_Btn">
+            <property name="text">
+             <string>设置波特率</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="enableDial_Btn">
+            <property name="text">
+             <string>使能拨号</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="checkDialSignal_Btn">
+            <property name="text">
+             <string>检查信号</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLineEdit" name="dial_LineEdit"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="dial_Btn">
+            <property name="text">
+             <string>拨号</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLineEdit" name="dialMessage_LineEdit"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="sendMessageDial_Btn">
+            <property name="text">
+             <string>发送</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clearDial_TextBrowser_Btn">
+            <property name="text">
+             <string>清除</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <widget class="QTextBrowser" name="Dial_TextBrowser"/>
+        </item>
+        <item row="4" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="DIALState_Label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>240</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(85, 255, 127);</string>
+            </property>
+            <property name="text">
+             <string>拨号状态</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="hangUp_Btn">
+            <property name="minimumSize">
+             <size>
+              <width>1</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>挂断</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>dialMessage_LineEdit</tabstop>
+  <tabstop>Dial_TextBrowser</tabstop>
+  <tabstop>hangUp_Btn</tabstop>
+  <tabstop>serialPort_ComBox</tabstop>
+  <tabstop>baud_Combox</tabstop>
+  <tabstop>flushSerial_Btn</tabstop>
+  <tabstop>openSerial_Btn</tabstop>
+  <tabstop>checkDeviceState_Btn</tabstop>
+  <tabstop>checkSBDSignal_Btn</tabstop>
+  <tabstop>creatSession_Btn</tabstop>
+  <tabstop>SBD_LineEdit</tabstop>
+  <tabstop>readMessage_Btn</tabstop>
+  <tabstop>sendMessageSBD_Btn</tabstop>
+  <tabstop>SBD_TextBrowser</tabstop>
+  <tabstop>setBaud_Btn</tabstop>
+  <tabstop>enableDial_Btn</tabstop>
+  <tabstop>checkDialSignal_Btn</tabstop>
+  <tabstop>dial_LineEdit</tabstop>
+  <tabstop>dial_Btn</tabstop>
+  <tabstop>sendMessageDial_Btn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
